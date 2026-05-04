@@ -1,0 +1,29 @@
+import random
+p1=input("player1:")
+p2=input("player2:")
+s1=10
+s2=10
+d1=random.randint(1,10)
+d2=random.randint(1,10)
+print("________player1 turn________")
+while(True):
+    g1=int(input("enter ur guess:"))
+    s1=s1-1
+    if g1==d1:
+        break
+print("________player2 turn________")
+while(True):
+    g2=int(input("enter ur guess:"))
+    s2=s2-1
+    if g2==d2:
+        break
+print("_______________summary_____________")
+print("{}:{}".format(p1,s1))
+print("{}:{}".format(p2,s2))
+print("___________result___________")
+if s1>s2:
+    print("winner is:",p1)
+elif s2>s1:
+    print("winner is:",p2)
+else:
+    print("tie")
